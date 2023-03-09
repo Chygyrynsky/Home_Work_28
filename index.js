@@ -1,19 +1,8 @@
-
-window.onload = function(){
-   
-document.getElementById("text").onfocus = function  ()  { 
-    let div = document.createElement('div');
-    document.body.append(div);
+window.onload=function(){
+const changeImg = ()=> {
+    const rand = Math.ceil(Math.random() * 10)
+document.querySelector('img').src = 'images/' + rand + '.jpg'
 }
-
-document.getElementById("text").onblur = function ()  { 
-    const square = document.querySelector("div");
-    square.remove();
-
+document.querySelector('button').addEventListener('click', changeImg)
 }
-
-}
-
-
-
 
